@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.1"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+    <script src="vega_lite_vis.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>FIT3179 Assignment 2: Electricity usage around the world</title>
+</head>
+
+<body>
+    <h1 style="text-align: center">
+        Electricity usage around the world
+    </h1>
+    <!-- <div id="bar_chart">
+</div> -->
+    <p id="intro">In this visualisation we explore electricity usage around the world, including energy usage by
+        country, and by industry. We'll also look at energy production around the world.</p>
+    <table style="width:100%;">
+        <tr>
+            <td class="carrycell" id="electricity_map">
+                <!-- <div id="electricity_map">
+                </div> -->
+            </td>
+            <td class="supportcell">
+                <strong>Who's using the most electricity overall?</strong>
+                <br/>
+                <p>
+                    China takes the lead for the country using the greatest amount of electricity, consuming an incredible
+                    4.6 million gigawatt-hours of electricity in a single year.
+                </p>
+                    The United States of America follows in 2nd place,
+                    consuming 3.7 million gigawatt-hours per year.
+                </p>
+                <p>
+                    However, it hasn't always been this way: drag the slider back in time, and you'll see
+                    that while America's electricity usage has consistently been quite high for many years, China only rocketed to the top
+                    in more recent years.
+                </p>
+                <!-- <p>
+                    The next closest country is Russia, only using about a quarter as much, with 756,000 gigawatt-hours consumed
+                    in one year.
+                </p> -->
+            </td>
+        </tr>
+    </table>
+    <div class="clear"></div>
+    <table>
+        <tr>
+            <td class="supportcell">
+                <strong>Who are the biggest exporters of electricity?</strong>
+                <br/>
+                <p>
+                    Not a lot of countries export electricity, but the two biggest exporters are France and Germany,
+                    who respectively exported a massive 75 and 74 <em>terawatt-hours</em> of electricity in 2014!
+                </p>
+                <p>
+                    Not far behind is Canada, which exported 58 terawatt-hours of electricity in the same year.
+                </p>
+            </td>
+            <td class="carrycell">
+                <div id="electricity_map_2">
+                </div>
+            </td>
+        </tr>
+    </table>
+    <div class="clear"></div>
+    <table>
+        <tr>
+            <td class="carrycell" id="electricity_map_3">
+                <!-- -->
+            </td>
+            <td class="supportcell">
+                <strong>...and who's <em>importing</em> all of that electricity?</strong>
+                <br/>
+                <p>
+                    America comes out on top as the biggest electricity importer, importing 66 terawatt-hours
+                    of electricity from other countries.
+                </p>
+                <p>
+                    Behind them is Italy at 46 terawatt-hours, Germany at 40 TWh, and Brazil at 33 TWh.  
+                </p>
+            </td>
+        </tr>
+    </table>
+
+</body>
+
+</html>
