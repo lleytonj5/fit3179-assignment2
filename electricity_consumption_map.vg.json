@@ -17,7 +17,8 @@
                 "input": "range",
                 "min": 1990,
                 "max": 2014,
-                "step": 1
+                "step": 1,
+                "name": "Year"
             }
         }
     ],
@@ -60,6 +61,11 @@
                             "quantity",
                             "year"
                         ]
+                    }
+                },
+                {
+                    "filter": {
+                        "param": "selected_year"
                     }
                 }
             ],
