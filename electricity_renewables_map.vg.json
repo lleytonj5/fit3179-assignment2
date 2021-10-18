@@ -3,25 +3,12 @@
     "width": 700,
     "height": 400,
     "title": {
-        "text": "Worldwide Electricity Consumption",
+        "text": "Proportion of electricity generated from renewable sources, 2014",
         "fontSize": 20
     },
     "projection": {
         "type": "equirectangular"
     },
-    "params": [
-        {
-            "name": "selected_year",
-            "value": 2014,
-            "bind": {
-                "input": "range",
-                "min": 1992,
-                "max": 2014,
-                "step": 1,
-                "name": "Year"
-            }
-        }
-    ],
     "layer": [
         {
             "data": {
@@ -33,7 +20,7 @@
             },
             "transform": [
                 {
-                    "calculate": "'Data is not available for ' + datum.properties.NAME + ' in ' + selected_year",
+                    "calculate": "'Data is not available for ' + datum.properties.NAME",
                     "as": "note"
                 }
             ],
@@ -50,7 +37,7 @@
         },
         {
             "data": {
-                "url": "electricity_consumption.csv"
+                "url": "electricity_renewables.csv"
             },
             "transform": [
                 {
@@ -66,9 +53,6 @@
                         "key": "properties.NAME"
                     },
                     "as": "geo"
-                },
-                {
-                    "filter": "datum.year == selected_year"
                 }
             ],
             "mark": {
@@ -84,9 +68,12 @@
                     "field": "quantity",
                     "type": "quantitative",
                     "title": [
-                        "Electricity consumption",
-                        "(Gigawatt-hours)"
-                    ]
+                        "Percentage generated",
+                        "by renewables"
+                    ],
+                    "scale": {
+                        "scheme": "greens"
+                    }
                 },
                 "tooltip": [
                     {
@@ -97,12 +84,8 @@
                     {
                         "field": "quantity",
                         "type": "quantitative",
-                        "title": "Electricity consumption (GWh)"
-                    },
-                    {
-                        "field": "year",
-                        "type": "ordinal",
-                        "title": "Year"
+                        "title": "Renewables",
+                        "formatType": "percentageFormat"
                     }
                 ]
             }

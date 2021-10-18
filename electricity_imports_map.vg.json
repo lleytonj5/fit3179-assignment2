@@ -59,7 +59,10 @@
                 "color": {
                     "field": "quantity",
                     "type": "quantitative",
-                    "title": "Electricity imports (Gigawatt-hours)"
+                    "title": ["Electricity imports", "(Gigawatt-hours)"],
+                    "scale": {
+                        "scheme": "oranges"
+                    }
                 },
                 "tooltip": [
                     {

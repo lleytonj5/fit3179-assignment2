@@ -59,7 +59,10 @@
                 "color": {
                     "field": "quantity",
                     "type": "quantitative",
-                    "title": "Electricity exports (Gigawatt-hours)"
+                    "title": ["Electricity exports", "(Gigawatt-hours)"],
+                    "scale": {
+                        "scheme": "blues"
+                    }
                 },
                 "tooltip": [
                     {
